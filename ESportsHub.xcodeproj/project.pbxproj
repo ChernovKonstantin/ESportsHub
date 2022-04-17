@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1731872327E0DFCC003B2489 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1731872227E0DFCC003B2489 /* MatchView.swift */; };
 		17DB50A327C63F630062C2CF /* ESportsHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50A227C63F630062C2CF /* ESportsHubApp.swift */; };
-		17DB50A527C63F630062C2CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50A427C63F630062C2CF /* ContentView.swift */; };
 		17DB50A727C63F670062C2CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17DB50A627C63F670062C2CF /* Assets.xcassets */; };
 		17DB50AA27C63F670062C2CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17DB50A927C63F670062C2CF /* Preview Assets.xcassets */; };
+		17DB50B327C66ADB0062C2CF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50B127C66ADB0062C2CF /* APIError.swift */; };
+		17DB50B427C66ADB0062C2CF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50B227C66ADB0062C2CF /* APIService.swift */; };
+		17DB50B627C66BE30062C2CF /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50B527C66BE30062C2CF /* APIRequest.swift */; };
+		17DB50B827C66FF80062C2CF /* APICreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50B727C66FF80062C2CF /* APICreds.swift */; };
+		17DB50BA27C679490062C2CF /* DotaMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50B927C679490062C2CF /* DotaMatchModel.swift */; };
+		17DB50BD27C67E810062C2CF /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50BC27C67E810062C2CF /* MatchesView.swift */; };
+		17DB50C027C67F510062C2CF /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50BF27C67F510062C2CF /* MatchesViewModel.swift */; };
+		17DB50C827C6900F0062C2CF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50C627C6900F0062C2CF /* MainViewModel.swift */; };
+		17DB50C927C6900F0062C2CF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50C727C6900F0062C2CF /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1731872227E0DFCC003B2489 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		17DB509F27C63F630062C2CF /* ESportsHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESportsHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17DB50A227C63F630062C2CF /* ESportsHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESportsHubApp.swift; sourceTree = "<group>"; };
-		17DB50A427C63F630062C2CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17DB50A627C63F670062C2CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17DB50A927C63F670062C2CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		17DB50B127C66ADB0062C2CF /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		17DB50B227C66ADB0062C2CF /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		17DB50B527C66BE30062C2CF /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		17DB50B727C66FF80062C2CF /* APICreds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICreds.swift; sourceTree = "<group>"; };
+		17DB50B927C679490062C2CF /* DotaMatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaMatchModel.swift; sourceTree = "<group>"; };
+		17DB50BC27C67E810062C2CF /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		17DB50BF27C67F510062C2CF /* MatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
+		17DB50C627C6900F0062C2CF /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		17DB50C727C6900F0062C2CF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				17DB50A227C63F630062C2CF /* ESportsHubApp.swift */,
-				17DB50A427C63F630062C2CF /* ContentView.swift */,
+				17DB50C727C6900F0062C2CF /* MainView.swift */,
+				17DB50C627C6900F0062C2CF /* MainViewModel.swift */,
+				17DB50BB27C679580062C2CF /* Models */,
+				17DB50BE27C67F210062C2CF /* Views */,
+				17DB50C127C67F5A0062C2CF /* ViewModel */,
+				17DB50B027C66ADB0062C2CF /* Services */,
 				17DB50A627C63F670062C2CF /* Assets.xcassets */,
 				17DB50A827C63F670062C2CF /* Preview Content */,
 			);
@@ -65,6 +88,42 @@
 				17DB50A927C63F670062C2CF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		17DB50B027C66ADB0062C2CF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				17DB50B127C66ADB0062C2CF /* APIError.swift */,
+				17DB50B227C66ADB0062C2CF /* APIService.swift */,
+				17DB50B527C66BE30062C2CF /* APIRequest.swift */,
+				17DB50B727C66FF80062C2CF /* APICreds.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		17DB50BB27C679580062C2CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17DB50B927C679490062C2CF /* DotaMatchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17DB50BE27C67F210062C2CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17DB50BC27C67E810062C2CF /* MatchesView.swift */,
+				1731872227E0DFCC003B2489 /* MatchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		17DB50C127C67F5A0062C2CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17DB50BF27C67F510062C2CF /* MatchesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17DB50A527C63F630062C2CF /* ContentView.swift in Sources */,
+				17DB50B827C66FF80062C2CF /* APICreds.swift in Sources */,
 				17DB50A327C63F630062C2CF /* ESportsHubApp.swift in Sources */,
+				17DB50C027C67F510062C2CF /* MatchesViewModel.swift in Sources */,
+				17DB50C927C6900F0062C2CF /* MainView.swift in Sources */,
+				17DB50B427C66ADB0062C2CF /* APIService.swift in Sources */,
+				17DB50BD27C67E810062C2CF /* MatchesView.swift in Sources */,
+				17DB50B627C66BE30062C2CF /* APIRequest.swift in Sources */,
+				17DB50BA27C679490062C2CF /* DotaMatchModel.swift in Sources */,
+				17DB50B327C66ADB0062C2CF /* APIError.swift in Sources */,
+				17DB50C827C6900F0062C2CF /* MainViewModel.swift in Sources */,
+				1731872327E0DFCC003B2489 /* MatchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
