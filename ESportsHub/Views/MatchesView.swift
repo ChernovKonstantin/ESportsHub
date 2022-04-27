@@ -16,6 +16,7 @@ struct MatchesView: View {
                 ForEach(viewModel.matches) { match in
                     VStack {
                         MatchView(viewModel: viewModel, match: match)
+                        Divider()
                     }
                     .task {
                         await viewModel.fetchImage(for: match.opponents)

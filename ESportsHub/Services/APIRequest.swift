@@ -13,10 +13,13 @@ enum APIRequest {
     case tournaments
     case teams
     case players
+    case runningMatches
     
     func asURLRequest(url: String = "", perPage: Int = 30, page: Int = 1) -> URLRequest {
-        let params = ["page": "\(page)", "per_page": "\(perPage)"]
+        let params = ["sort": "begin_at", "page": "\(page)", "per_page": "\(perPage)"]
         switch self {
+        case .runningMatches:
+            return buildRequest(urlString: "\(APICreds.baseURl)/matches/running", parameters: params)
         case .matches:
             return buildRequest(urlString: "\(APICreds.baseURl)/matches/upcoming", parameters: params)
         case .players:

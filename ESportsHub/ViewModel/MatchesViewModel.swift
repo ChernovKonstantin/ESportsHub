@@ -15,6 +15,8 @@ class MatchesViewModel: ObservableObject {
     func fetchMatches() async {
         let apiService = APIService()
         do {
+            let runningResponse: [DotaMatchModel] = try await apiService.makeRequest(request: .runningMatches)
+            self.matches.append(contentsOf: runningResponse.filter { $0.opponents.count > 0 })
             let response: [DotaMatchModel] = try await apiService.makeRequest(request: .matches)
             self.matches.append(contentsOf: response.filter { $0.opponents.count > 0 })
         } catch  {

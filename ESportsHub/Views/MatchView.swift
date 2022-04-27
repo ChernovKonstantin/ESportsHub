@@ -18,26 +18,18 @@ struct MatchView: View {
                 if let firstOpp = match.opponents.first?.opponent,
                    let secondOpp = match.opponents.last?.opponent {
                     Spacer()
+                    if match.status == GameStatus.running.rawValue {
+                        showLiveImage()
+                    }
                     teamImageView(imageID: firstOpp.id)
-                    Text(match.name)
+                    Text((firstOpp.acronym ?? firstOpp.name) + " vs " + (secondOpp.acronym ?? secondOpp.name))
                         .lineLimit(1)
                     teamImageView(imageID: secondOpp.id)
                     Spacer()
                 }
             }
             if clicked {
-                VStack {
-                    Text("\(match.matchType) \(match.numberOfGames)"
-                            .replacingOccurrences(of: "_", with: " ")
-                            .capitalized
-                    )
-                    Text(match.league.name)
-                    Text(match.scheduledAt)
-                }
-                .transition(AnyTransition.asymmetric(
-                    insertion: .move(edge: .top).combined(with: .opacity),
-                    removal: .scale.combined(with: .opacity)
-                ))
+                MatchDetailsView(match: match)
             }
         }
         .onTapGesture {
@@ -57,6 +49,12 @@ struct MatchView: View {
         return Image("dota")
             .resizable()
             .frame(width: 30, height: 30)
+    }
+    
+    func showLiveImage() -> some View {
+        Circle()
+            .fill(Color.red)
+            .frame(width: 10, height: 10)
     }
 }
 
