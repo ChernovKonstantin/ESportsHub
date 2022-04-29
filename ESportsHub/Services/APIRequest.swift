@@ -9,18 +9,22 @@ import Foundation
 
 enum APIRequest {
     
-    case matches
+    case upcomingMatches
     case tournaments
     case teams
     case players
     case runningMatches
+    case pastMatches
     
     func asURLRequest(url: String = "", perPage: Int = 30, page: Int = 1) -> URLRequest {
-        let params = ["sort": "begin_at", "page": "\(page)", "per_page": "\(perPage)"]
+        var params = ["sort": "begin_at", "page": "\(page)", "per_page": "\(perPage)"]
         switch self {
+        case .pastMatches:
+            params["sort"] = "-scheduled_at"
+            return buildRequest(urlString: "\(APICreds.baseURl)/matches/past", parameters: params)
         case .runningMatches:
             return buildRequest(urlString: "\(APICreds.baseURl)/matches/running", parameters: params)
-        case .matches:
+        case .upcomingMatches:
             return buildRequest(urlString: "\(APICreds.baseURl)/matches/upcoming", parameters: params)
         case .players:
             return buildRequest(urlString: "\(APICreds.baseURl)/players", parameters: params)

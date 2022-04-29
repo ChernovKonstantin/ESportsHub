@@ -12,30 +12,39 @@ struct MatchesView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                ForEach(viewModel.matches) { match in
-                    VStack {
-                        MatchView(viewModel: viewModel, match: match)
-                        Divider()
-                    }
-                    .task {
-                        await viewModel.fetchImage(for: match.opponents)
-                        
-//                        if viewModel.repositories.last == repo,
-//                           viewModel.canLoadMore {
-//                            if searchText.isEmpty {
-//                                await viewModel.fetchRepos()
-//                            } else {
-//                                await viewModel.fetchRepos(withName: searchText)
-//                            }
-//                        }
+            VStack {
+                Picker("", selection: $viewModel.pickedMatchesStatus) {
+                    ForEach(MatchesFilter.allCases, id: \.self) {
+                        Text($0.stringValue)
                     }
                 }
-            }
-            .navigationTitle("Matches")
-            .task {
-                await viewModel.fetchMatches()
-                
+                .pickerStyle(.segmented)
+                .padding()
+                ScrollView {
+                    ForEach(viewModel.matches) { match in
+                        VStack {
+                            MatchView(viewModel: viewModel, match: match)
+                            Divider()
+                        }
+                        .task {
+                            await viewModel.fetchImage(for: match.opponents)
+                            
+                            //                        if viewModel.repositories.last == repo,
+                            //                           viewModel.canLoadMore {
+                            //                            if searchText.isEmpty {
+                            //                                await viewModel.fetchRepos()
+                            //                            } else {
+                            //                                await viewModel.fetchRepos(withName: searchText)
+                            //                            }
+                            //                        }
+                        }
+                    }
+                }
+                .navigationTitle("Matches")
+                .task {
+                    await viewModel.fetchMatches()
+                    
+                }
             }
         }
     }

@@ -6,19 +6,37 @@
 //
 
 import SwiftUI
+import Combine
 
 class MatchesViewModel: ObservableObject {
     @Published var matches: [DotaMatchModel] = []
+    private var upcomingMatches: [DotaMatchModel] = []
+    private var runningMatches: [DotaMatchModel] = []
+    private var pastMatches: [DotaMatchModel] = []
     @Published var cachedImages: [Int: UIImage] = [:]
+    @Published var pickedMatchesStatus = MatchesFilter.upcoming
+    private var initialLoad = true
+    
+    var cancellable = Set<AnyCancellable>()
+    
+    init() {
+        subscibe()
+    }
     
     @MainActor
     func fetchMatches() async {
         let apiService = APIService()
         do {
+            let upcomingResponse: [DotaMatchModel] = try await apiService.makeRequest(request: .upcomingMatches)
+            self.upcomingMatches.append(contentsOf: upcomingResponse.filter { $0.opponents.count > 1 })
+            if initialLoad {
+                matches = upcomingMatches
+                initialLoad.toggle()
+            }
             let runningResponse: [DotaMatchModel] = try await apiService.makeRequest(request: .runningMatches)
-            self.matches.append(contentsOf: runningResponse.filter { $0.opponents.count > 0 })
-            let response: [DotaMatchModel] = try await apiService.makeRequest(request: .matches)
-            self.matches.append(contentsOf: response.filter { $0.opponents.count > 0 })
+            self.runningMatches.append(contentsOf: runningResponse.filter { $0.opponents.count > 1 })
+            let pastResponse: [DotaMatchModel] = try await apiService.makeRequest(request: .pastMatches)
+            self.pastMatches.append(contentsOf: pastResponse.filter { $0.opponents.count > 1 })
         } catch  {
             print(error.localizedDescription)
         }
@@ -45,13 +63,25 @@ class MatchesViewModel: ObservableObject {
         //              let second = opponents.last?.opponent else {
         //                  return
         //              }
-//        guard cachedImages[first.id] == nil else { return }
-//        let apiService = APIService()
-//        do {
-//            let image = try await apiService.loadImage(url: first)
-//            self.cachedImages[imageID] = image
-//        } catch {
-//            print(error.localizedDescription)
-//        }
+        //        guard cachedImages[first.id] == nil else { return }
+        //        let apiService = APIService()
+        //        do {
+        //            let image = try await apiService.loadImage(url: first)
+        //            self.cachedImages[imageID] = image
+        //        } catch {
+        //            print(error.localizedDescription)
+        //        }
+    }
+    
+    func subscibe() {
+        $pickedMatchesStatus
+            .sink(receiveValue: { [self] value in
+                switch value {
+                case .upcoming: matches = upcomingMatches
+                case .running: matches = runningMatches
+                case .past: matches = pastMatches
+                }
+            })
+            .store(in: &cancellable)
     }
 }

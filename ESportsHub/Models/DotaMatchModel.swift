@@ -19,6 +19,12 @@ struct DotaMatchModel: Codable, Identifiable {
     var opponents: [DotaOpponentsModel]
     var status: String
     var liveEmbedUrl: String?
+    var results: [MatchResult]
+    
+    struct MatchResult: Codable {
+        var score: Int
+        var teamId: Int
+    }
     
     struct LiveMatchModel: Codable {
         var supported: Bool
@@ -34,7 +40,8 @@ struct DotaMatchModel: Codable, Identifiable {
 }
 
 enum GameStatus: String, Codable, RawRepresentable {
-    case finished, running, canceled, postponed, notStarted
+    case finished, running, canceled, postponed
+    case notStarted = "not_started"
 }
 
 struct DotaOpponentsModel: Codable {
