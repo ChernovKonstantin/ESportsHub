@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1731872327E0DFCC003B2489 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1731872227E0DFCC003B2489 /* MatchView.swift */; };
 		179A13002819583600B9D737 /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A12FF2819583600B9D737 /* MatchDetailsView.swift */; };
-		17AC5E132819A1AD000694EA /* MatchesFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC5E122819A1AD000694EA /* MatchesFilter.swift */; };
+		17AC5E132819A1AD000694EA /* RequestFilterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC5E122819A1AD000694EA /* RequestFilterStatus.swift */; };
 		17DB50A327C63F630062C2CF /* ESportsHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50A227C63F630062C2CF /* ESportsHubApp.swift */; };
 		17DB50A727C63F670062C2CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17DB50A627C63F670062C2CF /* Assets.xcassets */; };
 		17DB50AA27C63F670062C2CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17DB50A927C63F670062C2CF /* Preview Assets.xcassets */; };
@@ -22,12 +22,17 @@
 		17DB50C027C67F510062C2CF /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50BF27C67F510062C2CF /* MatchesViewModel.swift */; };
 		17DB50C827C6900F0062C2CF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50C627C6900F0062C2CF /* MainViewModel.swift */; };
 		17DB50C927C6900F0062C2CF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB50C727C6900F0062C2CF /* MainView.swift */; };
+		17ECB6EC2829091900C93C26 /* TournamentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECB6EB2829091900C93C26 /* TournamentsView.swift */; };
+		17ECB6EE2829180100C93C26 /* DotaTournamentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECB6ED2829180100C93C26 /* DotaTournamentModel.swift */; };
+		17ECB6F02829228A00C93C26 /* TournamentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECB6EF2829228A00C93C26 /* TournamentsViewModel.swift */; };
+		17ECB6F228292B3700C93C26 /* TournamentsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECB6F128292B3700C93C26 /* TournamentsDetailsView.swift */; };
+		17ECB6F628292F8A00C93C26 /* String+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECB6F528292F8A00C93C26 /* String+Add.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1731872227E0DFCC003B2489 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		179A12FF2819583600B9D737 /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
-		17AC5E122819A1AD000694EA /* MatchesFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesFilter.swift; sourceTree = "<group>"; };
+		17AC5E122819A1AD000694EA /* RequestFilterStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFilterStatus.swift; sourceTree = "<group>"; };
 		17DB509F27C63F630062C2CF /* ESportsHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESportsHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17DB50A227C63F630062C2CF /* ESportsHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESportsHubApp.swift; sourceTree = "<group>"; };
 		17DB50A627C63F670062C2CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +46,11 @@
 		17DB50BF27C67F510062C2CF /* MatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
 		17DB50C627C6900F0062C2CF /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		17DB50C727C6900F0062C2CF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		17ECB6EB2829091900C93C26 /* TournamentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentsView.swift; sourceTree = "<group>"; };
+		17ECB6ED2829180100C93C26 /* DotaTournamentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaTournamentModel.swift; sourceTree = "<group>"; };
+		17ECB6EF2829228A00C93C26 /* TournamentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentsViewModel.swift; sourceTree = "<group>"; };
+		17ECB6F128292B3700C93C26 /* TournamentsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentsDetailsView.swift; sourceTree = "<group>"; };
+		17ECB6F528292F8A00C93C26 /* String+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Add.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,14 +69,6 @@
 			children = (
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		17AC5E102819A17F000694EA /* Matches */ = {
-			isa = PBXGroup;
-			children = (
-				17AC5E122819A1AD000694EA /* MatchesFilter.swift */,
-			);
-			path = Matches;
 			sourceTree = "<group>";
 		};
 		17DB509627C63F630062C2CF = {
@@ -91,6 +93,7 @@
 				17DB50A227C63F630062C2CF /* ESportsHubApp.swift */,
 				17DB50C727C6900F0062C2CF /* MainView.swift */,
 				17DB50C627C6900F0062C2CF /* MainViewModel.swift */,
+				17ECB6F328292F6500C93C26 /* Helpers */,
 				17DB50BB27C679580062C2CF /* Models */,
 				17DB50BE27C67F210062C2CF /* Views */,
 				17DB50C127C67F5A0062C2CF /* ViewModel */,
@@ -124,8 +127,9 @@
 		17DB50BB27C679580062C2CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				17AC5E102819A17F000694EA /* Matches */,
+				17AC5E122819A1AD000694EA /* RequestFilterStatus.swift */,
 				17DB50B927C679490062C2CF /* DotaMatchModel.swift */,
+				17ECB6ED2829180100C93C26 /* DotaTournamentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,9 +137,8 @@
 		17DB50BE27C67F210062C2CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				17DB50BC27C67E810062C2CF /* MatchesView.swift */,
-				1731872227E0DFCC003B2489 /* MatchView.swift */,
-				179A12FF2819583600B9D737 /* MatchDetailsView.swift */,
+				17ECB6EA282908F900C93C26 /* Tournaments */,
+				17ECB6E9282908C800C93C26 /* Matches */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,8 +147,44 @@
 			isa = PBXGroup;
 			children = (
 				17DB50BF27C67F510062C2CF /* MatchesViewModel.swift */,
+				17ECB6EF2829228A00C93C26 /* TournamentsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		17ECB6E9282908C800C93C26 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				17DB50BC27C67E810062C2CF /* MatchesView.swift */,
+				1731872227E0DFCC003B2489 /* MatchView.swift */,
+				179A12FF2819583600B9D737 /* MatchDetailsView.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		17ECB6EA282908F900C93C26 /* Tournaments */ = {
+			isa = PBXGroup;
+			children = (
+				17ECB6EB2829091900C93C26 /* TournamentsView.swift */,
+				17ECB6F128292B3700C93C26 /* TournamentsDetailsView.swift */,
+			);
+			path = Tournaments;
+			sourceTree = "<group>";
+		};
+		17ECB6F328292F6500C93C26 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				17ECB6F428292F6F00C93C26 /* Additions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		17ECB6F428292F6F00C93C26 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				17ECB6F528292F8A00C93C26 /* String+Add.swift */,
+			);
+			path = Additions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,16 +258,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				17DB50B827C66FF80062C2CF /* APICreds.swift in Sources */,
+				17ECB6F02829228A00C93C26 /* TournamentsViewModel.swift in Sources */,
+				17ECB6EE2829180100C93C26 /* DotaTournamentModel.swift in Sources */,
 				17DB50A327C63F630062C2CF /* ESportsHubApp.swift in Sources */,
 				17DB50C027C67F510062C2CF /* MatchesViewModel.swift in Sources */,
 				179A13002819583600B9D737 /* MatchDetailsView.swift in Sources */,
 				17DB50C927C6900F0062C2CF /* MainView.swift in Sources */,
+				17ECB6F228292B3700C93C26 /* TournamentsDetailsView.swift in Sources */,
 				17DB50B427C66ADB0062C2CF /* APIService.swift in Sources */,
 				17DB50BD27C67E810062C2CF /* MatchesView.swift in Sources */,
+				17ECB6EC2829091900C93C26 /* TournamentsView.swift in Sources */,
 				17DB50B627C66BE30062C2CF /* APIRequest.swift in Sources */,
+				17ECB6F628292F8A00C93C26 /* String+Add.swift in Sources */,
 				17DB50BA27C679490062C2CF /* DotaMatchModel.swift in Sources */,
 				17DB50B327C66ADB0062C2CF /* APIError.swift in Sources */,
-				17AC5E132819A1AD000694EA /* MatchesFilter.swift in Sources */,
+				17AC5E132819A1AD000694EA /* RequestFilterStatus.swift in Sources */,
 				17DB50C827C6900F0062C2CF /* MainViewModel.swift in Sources */,
 				1731872327E0DFCC003B2489 /* MatchView.swift in Sources */,
 			);
@@ -358,10 +402,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ESportsHub/Preview Content\"";
-				DEVELOPMENT_TEAM = 25FS7KFAQF;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -376,6 +420,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "N-A.ESportsHub";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,10 +432,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ESportsHub/Preview Content\"";
-				DEVELOPMENT_TEAM = 25FS7KFAQF;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -405,6 +450,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "N-A.ESportsHub";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

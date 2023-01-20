@@ -14,7 +14,7 @@ class MatchesViewModel: ObservableObject {
     private var runningMatches: [DotaMatchModel] = []
     private var pastMatches: [DotaMatchModel] = []
     @Published var cachedImages: [Int: UIImage] = [:]
-    @Published var pickedMatchesStatus = MatchesFilter.upcoming
+    @Published var pickedMatchesStatus = RequestFilterStatus.upcoming
     private var initialLoad = true
     
     var cancellable = Set<AnyCancellable>()
@@ -25,6 +25,7 @@ class MatchesViewModel: ObservableObject {
     
     @MainActor
     func fetchMatches() async {
+        guard initialLoad else { return }
         let apiService = APIService()
         do {
             let upcomingResponse: [DotaMatchModel] = try await apiService.makeRequest(request: .upcomingMatches)

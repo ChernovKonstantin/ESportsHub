@@ -29,14 +29,14 @@ struct DotaMatchModel: Codable, Identifiable {
     struct LiveMatchModel: Codable {
         var supported: Bool
     }
-    
-    struct DotaLeagueModel: Codable {
-        var name: String
-    }
+}
 
-    struct DotaSerieModel: Codable {
-        var fullName: String
-    }
+struct DotaLeagueModel: Codable {
+    var name: String
+}
+
+struct DotaSerieModel: Codable {
+    var fullName: String
 }
 
 enum GameStatus: String, Codable, RawRepresentable {

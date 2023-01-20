@@ -32,7 +32,9 @@ struct MatchDetailsView: View {
                     .capitalized
                 )
                 Text(match.league.name)
-                Text(getFormattedDate(input: match.scheduledAt))
+                Text(match.serie.fullName)
+//                Text(getFormattedDate(input: match.scheduledAt))
+                Text(match.scheduledAt.getFormattedDate())
                 
                 if match.status == GameStatus.running.rawValue,
                    let liveEmbedUrl = match.liveEmbedUrl,
@@ -49,15 +51,6 @@ struct MatchDetailsView: View {
         .transition(
             .scale.combined(with: .opacity)
         )
-    }
-    
-    func getFormattedDate(input: String) -> String {
-        let dateformat = DateFormatter()
-        dateformat.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let dateformat1 = DateFormatter()
-        dateformat1.locale = Locale(identifier: "en_US_POSIX")
-        dateformat1.dateFormat = "MMM d, HH:mm"
-        return dateformat1.string(from: dateformat.date(from: input)!)
     }
 }
 

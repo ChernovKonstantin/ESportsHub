@@ -15,7 +15,7 @@ struct MainView: View {
                 .tabItem {
                     Label("Matches", systemImage: "calendar")
                 }
-            MatchesView()
+            TournamentsView()
                 .tag(AppBottomNavigationTab.tournaments.rawValue)
                 .tabItem {
                     Label("Tournaments", systemImage: "flag.fill")

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MatchesFilter: CaseIterable {
+enum RequestFilterStatus: CaseIterable {
     
     case upcoming
     case running

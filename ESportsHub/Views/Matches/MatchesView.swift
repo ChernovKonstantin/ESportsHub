@@ -14,7 +14,7 @@ struct MatchesView: View {
         NavigationView {
             VStack {
                 Picker("", selection: $viewModel.pickedMatchesStatus) {
-                    ForEach(MatchesFilter.allCases, id: \.self) {
+                    ForEach(RequestFilterStatus.allCases, id: \.self) {
                         Text($0.stringValue)
                     }
                 }
@@ -42,8 +42,7 @@ struct MatchesView: View {
                 }
                 .navigationTitle("Matches")
                 .task {
-                    await viewModel.fetchMatches()
-                    
+                    await viewModel.fetchMatches() 
                 }
             }
         }
